@@ -137,6 +137,15 @@ function createBox(h2,pDate,p1,p2,p3){
   articleDate.classList.add('date');
   articleDate.classList.add('expandButton');
 
+  //add text content to elements
+  title.textContent = h2;
+  articleDate.textContent = pDate;
+  paragraph1.textContent = p1;
+  paragraph2.textContent = p2;
+  paragraph3.textContent = p3;
+  
+
+
   expandBtn.addEventListener('click', () => {
     let myVar = document.getElementsByClassName('articles');
     myVar.classList.toggle('article-open');
@@ -151,6 +160,6 @@ function createBox(h2,pDate,p1,p2,p3){
 
 const articlesDiv = document.querySelector('.articles');
 
-data.map(item => {
-  articlesDiv.append(createBox(item.h2, item.pDate, item.p1, item.p2, item.p3));
+data.forEach(item => {
+  articlesDiv.append(createBox(item.title, item.date, item.firstParagraph, item.secondParagraph, item.thirdParagraph));
 })
