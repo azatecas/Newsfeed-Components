@@ -166,11 +166,9 @@ function createBox(h2,pDate,p1,p2,p3){
   paragraph3.textContent = p3; 
   expandBtn.textContent = 'expand';
 
-// let myVar = document.getElementsByClassName('article');
-  expandBtn.addEventListener('click', () => {
-    
-    boxCont.classList.toggle('article-open');
-    
+  //toggle click event
+  expandBtn.addEventListener('click', () => {    
+    boxCont.classList.toggle('article-open');    
   })
 
   //test event listener
