@@ -139,11 +139,18 @@ function createBox(h2,pDate,p1,p2,p3){
 
   expandBtn.addEventListener('click', () => {
     let myVar = document.getElementsByClassName('articles');
-    myVar.classList.toggle('article-open')
-
+    myVar.classList.toggle('article-open');
   })
 
-
+  //test event listener
+  title.addEventListener('click', () => {
+    title.style.color = 'red';
+  })
   return boxCont;
-
 }
+
+const articlesDiv = document.querySelector('.articles');
+
+data.map(item => {
+  articlesDiv.append(createBox(item.h2, item.pDate, item.p1, item.p2, item.p3));
+})
