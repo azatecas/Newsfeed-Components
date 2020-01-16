@@ -41,13 +41,20 @@ funtion createMenu(arr){
   myDiv.append(myUl);
   myUl.append(myLi);
 
+  //adds css class to the parent div
   myDiv.classList.add('menu');
 
+  //iterate through arr and append the index to ul as li
   arr.forEach(item => {
     let myLi = document.createElement('li');
     myLi.textContent = item;
     myUl.append(myLi);    
   })
 
+  let myMenu = document.getElementsByClassName('menu-button');
+  myMenu.addEventListener('click', () => {
+    myDiv.classList.toggle('menu--button');
+  })
 
+  return myDiv;
 }
