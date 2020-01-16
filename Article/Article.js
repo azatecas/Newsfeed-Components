@@ -115,18 +115,29 @@ const data = [
 */
 function createBox(h2,pDate,p1,p2,p3){
 
+  //creates the HTML elements
   const boxCont = document.createElement('div');
   const title = document.createElement('h2');
   const articleDate = document.createElement('p');
   const paragraph1 = document.createElement('p');
   const paragraph2 = document.createElement('p');
   const paragraph3 = document.createElement('p');
+  const expandBtn = document.createElement('span');
 
+  //attaches the individual HTML elements to the BoxContent Div
   boxCont.append(title);
   boxCont.append(articleDate);
   boxCont.append(paragraph1);
   boxCont.append(paragraph2);
   boxCont.append(paragraph3);
+  boxCont.append(expandBtn);
+
+  //attaches css classes to the HTML Elements
+  boxCont.classList.add('article');
+  articleDate.classList.add('date');
+  articleDate.classList.add('expandButton');
+
+
 
 
 
