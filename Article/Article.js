@@ -137,10 +137,13 @@ function createBox(h2,pDate,p1,p2,p3){
   articleDate.classList.add('date');
   articleDate.classList.add('expandButton');
 
+  expandBtn.addEventListener('click', () => {
+    let myVar = document.getElementsByClassName('articles');
+    myVar.classList.toggle('article-open')
+
+  })
 
 
-
-
-
+  return boxCont;
 
 }
