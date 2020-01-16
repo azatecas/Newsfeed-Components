@@ -36,12 +36,18 @@ let menuItems = [
 funtion createMenu(arr){
   let myDiv = document.createElement('div');
   let myUl = document.createElement('ui');
-  let myLi = document.createElement('li')
+  
 
   myDiv.append(myUl);
   myUl.append(myLi);
 
   myDiv.classList.add('menu');
+
+  arr.forEach(item => {
+    let myLi = document.createElement('li');
+    myLi.textContent = item;
+    myUl.append(myLi);    
+  })
 
 
 }
